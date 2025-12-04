@@ -1,0 +1,122 @@
+# ============================================
+# .NET Core / C# Specific
+# ============================================
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+.vs/
+
+# ============================================
+# Node.js / npm / React Specific
+# ============================================
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+coverage/
+
+# ============================================
+# Environment & Secrets
+# ============================================
+.env
+.env.local
+.env.*.local
+.env.production.local
+secrets.json
+*.pem
+*.key
+
+# ============================================
+# IDE & Editor Files
+# ============================================
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ============================================
+# NuGet
+# ============================================
+*.nupkg
+*.snupkg
+.nuget/
+
+# ============================================
+# Visual Studio & Build
+# ============================================
+.vscode/
+.vs/
+.classpath
+.project
+.c9/
+*.launch
+.settings/
+
+# ============================================
+# Temporary & Build Files
+# ============================================
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# Application Specific
+# ============================================
+*.db
+*.db-shm
+*.db-wal
+ApplicationInsights.config
+
+# ============================================
+# Project-Specific (Student_Score_Manager)
+# ============================================
+Student_Score_Manager/bin/
+Student_Score_Manager/obj/
+
+# ============================================
+# Project-Specific (VolumeDiscountForm)
+# ============================================
+VolumeDiscountForm/node_modules/
+VolumeDiscountForm/build/
+VolumeDiscountForm/dist/
+
+# ============================================
+# Solution Files
+# ============================================
+*.sln
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# ============================================
+# Documentation Files (Ignore by default, but track specific files)
+# ============================================
+# *.docx
+# *.doc
+# *.pdf

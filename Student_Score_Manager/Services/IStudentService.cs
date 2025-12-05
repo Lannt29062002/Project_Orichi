@@ -9,5 +9,6 @@ namespace Student_Score_Manager.Services
         List<Student> GetAllStudents();
         List<Student> GetStudentsSortedByAverage();
         Student GetStudentWithHighestAverage();
+        List<Student> FindStudentsByAverageScore(double targetScore);
     }
 }

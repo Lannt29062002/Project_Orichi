@@ -99,6 +99,8 @@ ApplicationInsights.config
 # ============================================
 Student_Score_Manager/bin/
 Student_Score_Manager/obj/
+Student_Score_Manager.Tests/bin/
+Student_Score_Manager.Tests/obj/
 
 # ============================================
 # Project-Specific (VolumeDiscountForm)
@@ -106,6 +108,11 @@ Student_Score_Manager/obj/
 VolumeDiscountForm/node_modules/
 VolumeDiscountForm/build/
 VolumeDiscountForm/dist/
+
+# ============================================
+# Test Output Files
+# ============================================
+test_results.txt
 
 # ============================================
 # Solution Files

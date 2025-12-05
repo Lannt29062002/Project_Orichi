@@ -1,120 +1,121 @@
 # Volume Discount Form
 
-Ứng dụng React sử dụng **react-hook-form** để tạo form quản lý discount theo số lượng (volume discount).
+A React application using **react-hook-form** to create a form for managing volume-based discounts.
 
-## 📋 Yêu cầu
+## 🚀 Quick Start
 
-1. **Discount Type**: 
-   - None: Không có discount
-   - % discount: Giảm theo phần trăm
-   - Discount / each: Giảm theo từng sản phẩm
+### 1. Install Dependencies
 
-2. **Validation**:
-   - Campaign Name, Title, Rules phải điền
-   - Quantity, Amount trong Option không được trống và phải là số
-   - Title trong Option không được trống
-
-3. **Dynamic Options**:
-   - Form default có 2 option
-   - Mỗi khi thêm option, quantity sẽ tự tăng thêm 1
-   - Có thể xoá option (trừ 2 option mặc định)
-
-4. **Preview**:
-   - Hiển thị preview theo real-time khi người dùng nhập dữ liệu
-   - Preview thay đổi ngay khi nội dung trong Option thay đổi
-
-5. **Save**:
-   - Validate toàn bộ form
-   - Submit dữ liệu (hiện tại in ra console và alert)
-   - Sau khi validate thành công gọi API
-
-## 🎯 Tính năng chính
-
-✅ **Dynamic Options**: Thêm/xoá option động  
-✅ **Real-time Preview**: Cập nhật preview khi nhập liệu  
-✅ **Form Validation**: Kiểm tra toàn bộ fields  
-✅ **Conditional Fields**: Amount chỉ hiển thị khi discount != 'None'  
-✅ **React Hook Form**: Quản lý form state hiệu quả  
-✅ **Responsive Design**: Hỗ trợ desktop và mobile  
-
-## 📦 Cài đặt
-
-```bash
-cd d:\Project_Orichi\VolumeDiscountForm
+```powershell
+cd "d:\Project_Orichi\VolumeDiscountForm"
 npm install
+```
+
+### 2. Run Development Server
+
+```powershell
 npm start
 ```
 
-## 🏗️ Cấu trúc thư mục
+The server will automatically open your browser at `http://localhost:3000`
 
-```
-VolumeDiscountForm/
-├── public/
-│   └── index.html
-├── src/
-│   ├── VolumeDiscountForm.tsx      # Main form component
-│   ├── VolumeDiscountForm.css      # Form styles
-│   ├── App.tsx                      # App wrapper
-│   ├── App.css
-│   ├── index.tsx                    # React root
-│   └── index.css
-├── package.json
-├── tsconfig.json
-└── README.md
+### 3. Run Tests
+
+```powershell
+# Run all tests (one-time)
+npm test -- --watchAll=false
+
+# Run tests in watch mode (interactive)
+npm test
+
+# Run tests with coverage report
+npm test -- --coverage --watchAll=false
 ```
 
-## 🎨 Thiết kế
+## 📊 Test Suite
 
-- **Layout 2 cột**: Form bên trái, Preview bên phải (sticky)
-- **Color scheme**: Màu đỏ (#ef4444) cho CTA buttons
-- **Responsive**: Chuyển sang single column trên mobile
+**39 Tests - 100% Pass Rate ✅**
 
-## 📝 Component Details
+```
+Basic Rendering (7 tests)
+  ✅ Form rendering, default values, buttons
 
-### VolumeDiscountForm.tsx
+Form Input Fields (6 tests)
+  ✅ Text inputs, textareas, selects
 
-**State:**
-- `discountType`: Loại discount (none, percent, fixed)
-- `formData`: Dữ liệu form real-time từ `watch()`
+Field Array Management (4 tests)
+  ✅ Add/remove options, validation
 
-**Methods:**
-- `onSubmit()`: Submit form với validation
-- `addOption()`: Thêm option mới
-- `getDiscountTypeLabel()`: Lấy nhãn discount type
+Conditional Rendering (4 tests)
+  ✅ Discount type logic, amount field visibility
 
-**Features:**
-- Sử dụng `useFieldArray` để quản lý dynamic array options
-- Sử dụng `Controller` để control từng field
-- Real-time validation errors
-- Conditional rendering cho Amount field
+Preview Table (3 tests)
+  ✅ Real-time updates, data display
 
-## 🔧 Cách thêm API Integration
+Form Validation (5 tests)
+  ✅ Required fields, error messages
 
-Hiện tại form chỉ in dữ liệu lên console. Để integrate API:
+Form Submission (7 tests)
+  ✅ API calls, loading state, error handling
 
-```typescript
-const onSubmit = async (data: VolumeDiscountFormData) => {
-  try {
-    const response = await fetch('/api/discount', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    const result = await response.json();
-    console.log('API Response:', result);
-  } catch (error) {
-    console.error('API Error:', error);
-  }
-};
+Integration Tests (3 tests)
+  ✅ Complete workflows
 ```
 
-## 📱 Responsive Breakpoints
+## 🎯 Key Features
 
-- **Desktop**: 1400px max-width, 2-column layout
-- **Tablet**: 1024px, single column
-- **Mobile**: Option grid switches to 1 column
+✅ **Dynamic Options** - Add/remove options  
+✅ **Real-time Preview** - Update instantly while typing  
+✅ **Form Validation** - Validate all fields  
+✅ **Conditional Fields** - Amount field visibility based on discount type  
+✅ **React Hook Form** - Efficient state management  
+✅ **Fully Tested** - 39 test cases coverage  
+
+## 🛠️ Technology Stack
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **React Hook Form** - Form management
+- **Jest** - Test runner
+- **React Testing Library** - Component testing
+
+## 📁 Project Structure
+
+```
+src/
+├── VolumeDiscountForm.tsx       # Main component (375 lines)
+├── VolumeDiscountForm.test.tsx  # Tests (735 lines, 39 tests)
+├── VolumeDiscountForm.css       # Styles
+├── setupTests.ts                # Jest configuration
+├── App.tsx
+├── index.tsx
+└── react-app-env.d.ts
+
+jest.config.js                   # Jest setup
+package.json
+tsconfig.json
+```
+
+## 📖 Troubleshooting
+
+### Port 3000 is already in use
+```powershell
+npm start -- --port 3001
+```
+
+### Clear npm cache
+```powershell
+npm cache clean --force
+npm install
+```
+
+### Remove node_modules and reinstall
+```powershell
+Remove-Item -Recurse -Force node_modules
+npm install
+```
 
 ---
 
-**Created**: December 2024  
-**Technology**: React 18 + TypeScript + React Hook Form
+**Last Updated:** December 5, 2025  
+**Test Status:** ✅ 39/39 Passing
